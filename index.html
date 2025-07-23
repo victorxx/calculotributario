@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Cálculo Tributário Avançado – Ferramenta Precisa e Fácil</title>
+  
+  <meta name="description" content="Cálculo Tributário Avançado Online — Calcule IRPJ, CSLL, PIS, COFINS e muito mais com precisão e rapidez. Ferramenta gratuita e fácil de usar para empresas e profissionais contábeis." />
+  <meta name="keywords" content="cálculo tributário, impostos, IRPJ, CSLL, PIS, COFINS, cálculo avançado, ferramenta tributária, contabilidade online, cálculo de impostos" />
+  <meta name="author" content="VictorSaib" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cálculo Tributário Avançado Online – Ferramenta Precisa e Fácil" />
+  <meta property="og:description" content="Simplifique o cálculo de IRPJ, CSLL, PIS, COFINS e outros impostos com nossa calculadora tributária avançada. Resultados rápidos e confiáveis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.seusite.com/calculo-tributario" />
+  <meta property="og:image" content="https://www.seusite.com/imagens/calculadora-tributaria.jpg" />
+  <meta property="og:site_name" content="Calculadora Tributária Pro" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cálculo Tributário Avançado Online – Ferramenta Precisa e Fácil" />
+  <meta name="twitter:description" content="Calcule IRPJ, CSLL, PIS, COFINS e outros impostos em segundos. Ferramenta prática para contadores e empresários." />
+  <meta name="twitter:image" content="https://www.seusite.com/imagens/calculadora-tributaria.jpg" />
+  <meta name="twitter:site" content="@VictorSaib" />
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f7;
+      margin: 0; padding: 20px;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #0073e6;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 25px;
+      background: #0073e6;
+      color: white;
+      padding: 15px;
+      width: 100%;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #005bb5;
+    }
+    .resultado {
+      margin-top: 30px;
+      background: #e6f0ff;
+      padding: 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #004080;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Calculadora Tributária Avançada</h1>
+    <p>Calcule IRPJ, CSLL, PIS, COFINS e ISS com facilidade e rapidez!</p>
+  </header>
+  
+  <div class="container">
+    <label for="valorBruto">Valor Bruto (R$):</label>
+    <br>
+    <br>
+    <input type="number" id="valorBruto" placeholder="Digite o valor bruto" min="0" step="0.01" />
+          <iframe src="https://modeloanuncio01.pages.dev/" width="350" height="250" frameborder="0" allowfullscreen></iframe>
+           <iframe src="https://encurtadorko.pages.dev/" width="350" height="500" frameborder="0" allowfullscreen></iframe>
+            <a href="http://www.espiritosanto-es.com.br/cloudflare" 
+                    style="display: inline-block; background-color: red; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-family: sans-serif;">
+                    CONFERIR
+                    </a>
+    
+    <button onclick="calcularTributos()">Calcular</button>
+    
+    <div id="resultado" class="resultado" style="display:none;"></div>
+  </div>
+
+  <script>
+    function calcularTributos() {
+      const valor = parseFloat(document.getElementById('valorBruto').value);
+      if (isNaN(valor) || valor <= 0) {
+        alert('Por favor, insira um valor bruto válido maior que zero.');
+        return;
+      }
+      
+      // Alíquotas padrão (exemplo)
+      const aliquotas = {
+        IRPJ: 0.048,
+        CSLL: 0.0288,
+        PIS: 0.0065,
+        COFINS: 0.03,
+        ISS: 0.02
+      };
+      
+      // Cálculo dos impostos
+      const irpj = valor * aliquotas.IRPJ;
+      const csll = valor * aliquotas.CSLL;
+      const pis = valor * aliquotas.PIS;
+      const cofins = valor * aliquotas.COFINS;
+      const iss = valor * aliquotas.ISS;
+      
+      const totalImpostos = irpj + csll + pis + cofins + iss;
+      const valorLiquido = valor - totalImpostos;
+      
+      // Exibir resultados formatados
+      const resultadoDiv = document.getElementById('resultado');
+      resultadoDiv.style.display = 'block';
+      resultadoDiv.innerHTML = `
+        <p><strong>Valor Bruto:</strong> R$ ${valor.toFixed(2)}</p>
+        <p><strong>IRPJ (4.8%):</strong> R$ ${irpj.toFixed(2)}</p>
+        <p><strong>CSLL (2.88%):</strong> R$ ${csll.toFixed(2)}</p>
+        <p><strong>PIS (0.65%):</strong> R$ ${pis.toFixed(2)}</p>
+        <p><strong>COFINS (3%):</strong> R$ ${cofins.toFixed(2)}</p>
+        <p><strong>ISS (2%):</strong> R$ ${iss.toFixed(2)}</p>
+        <hr>
+        <p><strong>Total de Impostos:</strong> R$ ${totalImpostos.toFixed(2)}</p>
+        <p><strong>Valor Líquido:</strong> R$ ${valorLiquido.toFixed(2)}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
